@@ -1,0 +1,864 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		915AACE91D8BF745009301E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AACE81D8BF745009301E0 /* AppDelegate.swift */; };
+		915AACEE1D8BF745009301E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915AACEC1D8BF745009301E0 /* Main.storyboard */; };
+		915AACF01D8BF745009301E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 915AACEF1D8BF745009301E0 /* Assets.xcassets */; };
+		915AACF31D8BF745009301E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915AACF11D8BF745009301E0 /* LaunchScreen.storyboard */; };
+		915AACFE1D8BF745009301E0 /* SimpleShoppingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AACFD1D8BF745009301E0 /* SimpleShoppingTests.swift */; };
+		915AAD091D8BF7A2009301E0 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AAD081D8BF7A2009301E0 /* ItemModel.swift */; };
+		915AAD111D8BF7AF009301E0 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AAD0C1D8BF7AF009301E0 /* ItemTableViewCell.swift */; };
+		915AAD121D8BF7AF009301E0 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AAD0D1D8BF7AF009301E0 /* SegueHandlerType.swift */; };
+		915AAD131D8BF7AF009301E0 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AAD0E1D8BF7AF009301E0 /* ShoppingViewController.swift */; };
+		915AAD151D8BF7BB009301E0 /* ShoppingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AAD141D8BF7BB009301E0 /* ShoppingViewModel.swift */; };
+		915AAD171D8BF7EE009301E0 /* ShoppingStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AAD161D8BF7EE009301E0 /* ShoppingStepper.swift */; };
+		915AAD1C1D8BF9E0009301E0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AAD1B1D8BF9E0009301E0 /* UserModel.swift */; };
+		915AAD201D8BFE87009301E0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915AAD1F1D8BFE87009301E0 /* UserService.swift */; };
+		91A50F9E1D90D9B50066585D /* CurrencyPickerDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A50F9D1D90D9B50066585D /* CurrencyPickerDatasource.swift */; };
+		91A50FA21D911E4E0066585D /* UserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A50FA11D911E4E0066585D /* UserServiceTests.swift */; };
+		91A50FA41D91209A0066585D /* CurrencyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A50FA31D91209A0066585D /* CurrencyServiceTests.swift */; };
+		91A50FA61D91239C0066585D /* SimpleShoppingAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A50FA51D91239C0066585D /* SimpleShoppingAPIs.swift */; };
+		91A50FB51D912ADE0066585D /* SimpleNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A50FAC1D912ADE0066585D /* SimpleNetwork.framework */; };
+		91A50FBC1D912ADE0066585D /* SimpleNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A50FBB1D912ADE0066585D /* SimpleNetworkTests.swift */; };
+		91A50FBE1D912ADE0066585D /* SimpleNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A50FAE1D912ADE0066585D /* SimpleNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91A50FC11D912ADE0066585D /* SimpleNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A50FAC1D912ADE0066585D /* SimpleNetwork.framework */; };
+		91A50FC21D912ADE0066585D /* SimpleNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A50FAC1D912ADE0066585D /* SimpleNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A50FCB1D912B120066585D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A50FCA1D912B120066585D /* NetworkService.swift */; };
+		91A50FCD1D91384A0066585D /* currency.json in Resources */ = {isa = PBXBuildFile; fileRef = 91A50FCC1D91384A0066585D /* currency.json */; };
+		91A50FCF1D913D240066585D /* CartViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A50FCE1D913D240066585D /* CartViewModelTest.swift */; };
+		91A50FD11D914C090066585D /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A50FD01D914C090066585D /* Mocks.swift */; };
+		91A8F9AF1D8FCF5300D4B72E /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8F9AE1D8FCF5300D4B72E /* CartViewModel.swift */; };
+		91A8F9B11D8FD10400D4B72E /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8F9B01D8FD10400D4B72E /* ItemService.swift */; };
+		91A8F9B31D8FDB5300D4B72E /* ItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8F9B21D8FDB5300D4B72E /* ItemCellViewModel.swift */; };
+		91A8F9B51D8FDBCC00D4B72E /* ItemCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8F9B41D8FDBCC00D4B72E /* ItemCellType.swift */; };
+		91A8F9B91D8FDC4300D4B72E /* UITableView+ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8F9B81D8FDC4300D4B72E /* UITableView+ItemCell.swift */; };
+		91A8F9BB1D8FDC6600D4B72E /* SingleSectionItemsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8F9BA1D8FDC6600D4B72E /* SingleSectionItemsDataSource.swift */; };
+		91A8F9BF1D8FE0F600D4B72E /* CartCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A8F9BE1D8FE0F600D4B72E /* CartCellViewModel.swift */; };
+		91C65F8A1D8E6F2C00A7D825 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C65F891D8E6F2C00A7D825 /* CartViewController.swift */; };
+		91F8F97F1D8F834100D8E04A /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F8F97E1D8F834100D8E04A /* CartItemTableViewCell.swift */; };
+		91F8F9811D8F862600D8E04A /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F8F9801D8F862600D8E04A /* CurrencyModel.swift */; };
+		91F8F9831D8FB1F200D8E04A /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F8F9821D8FB1F200D8E04A /* CurrencyService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		915AACFA1D8BF745009301E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 915AACDD1D8BF745009301E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 915AACE41D8BF745009301E0;
+			remoteInfo = SimpleShopping;
+		};
+		91A50FB61D912ADE0066585D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 915AACDD1D8BF745009301E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91A50FAB1D912ADE0066585D;
+			remoteInfo = SimpleNetwork;
+		};
+		91A50FB81D912ADE0066585D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 915AACDD1D8BF745009301E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 915AACE41D8BF745009301E0;
+			remoteInfo = SimpleShopping;
+		};
+		91A50FBF1D912ADE0066585D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 915AACDD1D8BF745009301E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91A50FAB1D912ADE0066585D;
+			remoteInfo = SimpleNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		91A50FC61D912ADE0066585D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				91A50FC21D912ADE0066585D /* SimpleNetwork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		915AACE51D8BF745009301E0 /* SimpleShopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleShopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		915AACE81D8BF745009301E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		915AACED1D8BF745009301E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		915AACEF1D8BF745009301E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		915AACF21D8BF745009301E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		915AACF41D8BF745009301E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		915AACF91D8BF745009301E0 /* SimpleShoppingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleShoppingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		915AACFD1D8BF745009301E0 /* SimpleShoppingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleShoppingTests.swift; sourceTree = "<group>"; };
+		915AACFF1D8BF745009301E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		915AAD081D8BF7A2009301E0 /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemModel.swift; path = Model/ItemModel.swift; sourceTree = "<group>"; };
+		915AAD0C1D8BF7AF009301E0 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemTableViewCell.swift; path = View/ItemTableViewCell.swift; sourceTree = "<group>"; };
+		915AAD0D1D8BF7AF009301E0 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegueHandlerType.swift; path = View/SegueHandlerType.swift; sourceTree = "<group>"; };
+		915AAD0E1D8BF7AF009301E0 /* ShoppingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingViewController.swift; path = View/ShoppingViewController.swift; sourceTree = "<group>"; };
+		915AAD141D8BF7BB009301E0 /* ShoppingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingViewModel.swift; path = ViewModel/ShoppingViewModel.swift; sourceTree = "<group>"; };
+		915AAD161D8BF7EE009301E0 /* ShoppingStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShoppingStepper.swift; path = View/ShoppingStepper.swift; sourceTree = "<group>"; };
+		915AAD1B1D8BF9E0009301E0 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Model/UserModel.swift; sourceTree = "<group>"; };
+		915AAD1F1D8BFE87009301E0 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = DataLayer/UserService.swift; sourceTree = "<group>"; };
+		91A50F9D1D90D9B50066585D /* CurrencyPickerDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyPickerDatasource.swift; path = View/CurrencyPickerDatasource.swift; sourceTree = "<group>"; };
+		91A50FA11D911E4E0066585D /* UserServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceTests.swift; sourceTree = "<group>"; };
+		91A50FA31D91209A0066585D /* CurrencyServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyServiceTests.swift; sourceTree = "<group>"; };
+		91A50FA51D91239C0066585D /* SimpleShoppingAPIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleShoppingAPIs.swift; sourceTree = "<group>"; };
+		91A50FAC1D912ADE0066585D /* SimpleNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91A50FAE1D912ADE0066585D /* SimpleNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleNetwork.h; sourceTree = "<group>"; };
+		91A50FAF1D912ADE0066585D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91A50FB41D912ADE0066585D /* SimpleNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91A50FBB1D912ADE0066585D /* SimpleNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkTests.swift; sourceTree = "<group>"; };
+		91A50FBD1D912ADE0066585D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91A50FCA1D912B120066585D /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		91A50FCC1D91384A0066585D /* currency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = currency.json; sourceTree = "<group>"; };
+		91A50FCE1D913D240066585D /* CartViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewModelTest.swift; sourceTree = "<group>"; };
+		91A50FD01D914C090066585D /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		91A8F9AE1D8FCF5300D4B72E /* CartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartViewModel.swift; path = ViewModel/CartViewModel.swift; sourceTree = "<group>"; };
+		91A8F9B01D8FD10400D4B72E /* ItemService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemService.swift; path = DataLayer/ItemService.swift; sourceTree = "<group>"; };
+		91A8F9B21D8FDB5300D4B72E /* ItemCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCellViewModel.swift; path = ViewModel/ItemCellViewModel.swift; sourceTree = "<group>"; };
+		91A8F9B41D8FDBCC00D4B72E /* ItemCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCellType.swift; path = View/ItemCellType.swift; sourceTree = "<group>"; };
+		91A8F9B81D8FDC4300D4B72E /* UITableView+ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+ItemCell.swift"; path = "View/UITableView+ItemCell.swift"; sourceTree = "<group>"; };
+		91A8F9BA1D8FDC6600D4B72E /* SingleSectionItemsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleSectionItemsDataSource.swift; path = View/SingleSectionItemsDataSource.swift; sourceTree = "<group>"; };
+		91A8F9BE1D8FE0F600D4B72E /* CartCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartCellViewModel.swift; sourceTree = "<group>"; };
+		91C65F891D8E6F2C00A7D825 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartViewController.swift; path = View/CartViewController.swift; sourceTree = "<group>"; };
+		91F8F97E1D8F834100D8E04A /* CartItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartItemTableViewCell.swift; path = View/CartItemTableViewCell.swift; sourceTree = "<group>"; };
+		91F8F9801D8F862600D8E04A /* CurrencyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyModel.swift; path = Model/CurrencyModel.swift; sourceTree = "<group>"; };
+		91F8F9821D8FB1F200D8E04A /* CurrencyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyService.swift; path = DataLayer/CurrencyService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		915AACE21D8BF745009301E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91A50FC11D912ADE0066585D /* SimpleNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		915AACF61D8BF745009301E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91A50FA81D912ADE0066585D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91A50FB11D912ADE0066585D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91A50FB51D912ADE0066585D /* SimpleNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		915AACDC1D8BF745009301E0 = {
+			isa = PBXGroup;
+			children = (
+				915AACE71D8BF745009301E0 /* SimpleShopping */,
+				915AACFC1D8BF745009301E0 /* SimpleShoppingTests */,
+				91A50FAD1D912ADE0066585D /* SimpleNetwork */,
+				91A50FBA1D912ADE0066585D /* SimpleNetworkTests */,
+				915AACE61D8BF745009301E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		915AACE61D8BF745009301E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				915AACE51D8BF745009301E0 /* SimpleShopping.app */,
+				915AACF91D8BF745009301E0 /* SimpleShoppingTests.xctest */,
+				91A50FAC1D912ADE0066585D /* SimpleNetwork.framework */,
+				91A50FB41D912ADE0066585D /* SimpleNetworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		915AACE71D8BF745009301E0 /* SimpleShopping */ = {
+			isa = PBXGroup;
+			children = (
+				91F8F9841D8FB21500D8E04A /* Services */,
+				915AAD181D8BF838009301E0 /* View */,
+				915AAD191D8BF84B009301E0 /* ViewModel */,
+				915AAD1A1D8BF853009301E0 /* Model */,
+				915AACE81D8BF745009301E0 /* AppDelegate.swift */,
+				915AACEC1D8BF745009301E0 /* Main.storyboard */,
+				915AACEF1D8BF745009301E0 /* Assets.xcassets */,
+				915AACF11D8BF745009301E0 /* LaunchScreen.storyboard */,
+				915AACF41D8BF745009301E0 /* Info.plist */,
+			);
+			path = SimpleShopping;
+			sourceTree = "<group>";
+		};
+		915AACFC1D8BF745009301E0 /* SimpleShoppingTests */ = {
+			isa = PBXGroup;
+			children = (
+				91A50FCE1D913D240066585D /* CartViewModelTest.swift */,
+				915AACFD1D8BF745009301E0 /* SimpleShoppingTests.swift */,
+				915AACFF1D8BF745009301E0 /* Info.plist */,
+				91A50FA11D911E4E0066585D /* UserServiceTests.swift */,
+				91A50FA31D91209A0066585D /* CurrencyServiceTests.swift */,
+				91A50FCC1D91384A0066585D /* currency.json */,
+				91A50FD01D914C090066585D /* Mocks.swift */,
+			);
+			path = SimpleShoppingTests;
+			sourceTree = "<group>";
+		};
+		915AAD181D8BF838009301E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91A8F9BD1D8FDD0C00D4B72E /* Base */,
+				91A8F9BC1D8FDCF700D4B72E /* ShoppingViewController */,
+				91EDF3E31D914DC0006526AC /* CartViewController */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		915AAD191D8BF84B009301E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				915AAD141D8BF7BB009301E0 /* ShoppingViewModel.swift */,
+				91A8F9AE1D8FCF5300D4B72E /* CartViewModel.swift */,
+				91A8F9B21D8FDB5300D4B72E /* ItemCellViewModel.swift */,
+				91A8F9BE1D8FE0F600D4B72E /* CartCellViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		915AAD1A1D8BF853009301E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				915AAD081D8BF7A2009301E0 /* ItemModel.swift */,
+				915AAD1B1D8BF9E0009301E0 /* UserModel.swift */,
+				91F8F9801D8F862600D8E04A /* CurrencyModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		91A50FAD1D912ADE0066585D /* SimpleNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				91A50FCA1D912B120066585D /* NetworkService.swift */,
+				91A50FAE1D912ADE0066585D /* SimpleNetwork.h */,
+				91A50FAF1D912ADE0066585D /* Info.plist */,
+			);
+			path = SimpleNetwork;
+			sourceTree = "<group>";
+		};
+		91A50FBA1D912ADE0066585D /* SimpleNetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				91A50FBB1D912ADE0066585D /* SimpleNetworkTests.swift */,
+				91A50FBD1D912ADE0066585D /* Info.plist */,
+			);
+			path = SimpleNetworkTests;
+			sourceTree = "<group>";
+		};
+		91A8F9BC1D8FDCF700D4B72E /* ShoppingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				915AAD0E1D8BF7AF009301E0 /* ShoppingViewController.swift */,
+				915AAD161D8BF7EE009301E0 /* ShoppingStepper.swift */,
+				915AAD0C1D8BF7AF009301E0 /* ItemTableViewCell.swift */,
+				91A50F9D1D90D9B50066585D /* CurrencyPickerDatasource.swift */,
+			);
+			name = ShoppingViewController;
+			sourceTree = "<group>";
+		};
+		91A8F9BD1D8FDD0C00D4B72E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				91A8F9BA1D8FDC6600D4B72E /* SingleSectionItemsDataSource.swift */,
+				915AAD0D1D8BF7AF009301E0 /* SegueHandlerType.swift */,
+				91A8F9B41D8FDBCC00D4B72E /* ItemCellType.swift */,
+				91A8F9B81D8FDC4300D4B72E /* UITableView+ItemCell.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		91EDF3E31D914DC0006526AC /* CartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				91C65F891D8E6F2C00A7D825 /* CartViewController.swift */,
+				91F8F97E1D8F834100D8E04A /* CartItemTableViewCell.swift */,
+			);
+			name = CartViewController;
+			sourceTree = "<group>";
+		};
+		91F8F9841D8FB21500D8E04A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				915AAD1F1D8BFE87009301E0 /* UserService.swift */,
+				91F8F9821D8FB1F200D8E04A /* CurrencyService.swift */,
+				91A8F9B01D8FD10400D4B72E /* ItemService.swift */,
+				91A50FA51D91239C0066585D /* SimpleShoppingAPIs.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		91A50FA91D912ADE0066585D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91A50FBE1D912ADE0066585D /* SimpleNetwork.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		915AACE41D8BF745009301E0 /* SimpleShopping */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 915AAD021D8BF745009301E0 /* Build configuration list for PBXNativeTarget "SimpleShopping" */;
+			buildPhases = (
+				915AACE11D8BF745009301E0 /* Sources */,
+				915AACE21D8BF745009301E0 /* Frameworks */,
+				915AACE31D8BF745009301E0 /* Resources */,
+				91A50FC61D912ADE0066585D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91A50FC01D912ADE0066585D /* PBXTargetDependency */,
+			);
+			name = SimpleShopping;
+			productName = SimpleShopping;
+			productReference = 915AACE51D8BF745009301E0 /* SimpleShopping.app */;
+			productType = "com.apple.product-type.application";
+		};
+		915AACF81D8BF745009301E0 /* SimpleShoppingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 915AAD051D8BF745009301E0 /* Build configuration list for PBXNativeTarget "SimpleShoppingTests" */;
+			buildPhases = (
+				915AACF51D8BF745009301E0 /* Sources */,
+				915AACF61D8BF745009301E0 /* Frameworks */,
+				915AACF71D8BF745009301E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				915AACFB1D8BF745009301E0 /* PBXTargetDependency */,
+			);
+			name = SimpleShoppingTests;
+			productName = SimpleShoppingTests;
+			productReference = 915AACF91D8BF745009301E0 /* SimpleShoppingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		91A50FAB1D912ADE0066585D /* SimpleNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91A50FC31D912ADE0066585D /* Build configuration list for PBXNativeTarget "SimpleNetwork" */;
+			buildPhases = (
+				91A50FA71D912ADE0066585D /* Sources */,
+				91A50FA81D912ADE0066585D /* Frameworks */,
+				91A50FA91D912ADE0066585D /* Headers */,
+				91A50FAA1D912ADE0066585D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleNetwork;
+			productName = SimpleNetwork;
+			productReference = 91A50FAC1D912ADE0066585D /* SimpleNetwork.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		91A50FB31D912ADE0066585D /* SimpleNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91A50FC71D912ADE0066585D /* Build configuration list for PBXNativeTarget "SimpleNetworkTests" */;
+			buildPhases = (
+				91A50FB01D912ADE0066585D /* Sources */,
+				91A50FB11D912ADE0066585D /* Frameworks */,
+				91A50FB21D912ADE0066585D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91A50FB71D912ADE0066585D /* PBXTargetDependency */,
+				91A50FB91D912ADE0066585D /* PBXTargetDependency */,
+			);
+			name = SimpleNetworkTests;
+			productName = SimpleNetworkTests;
+			productReference = 91A50FB41D912ADE0066585D /* SimpleNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		915AACDD1D8BF745009301E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = punty;
+				TargetAttributes = {
+					915AACE41D8BF745009301E0 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					915AACF81D8BF745009301E0 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 915AACE41D8BF745009301E0;
+					};
+					91A50FAB1D912ADE0066585D = {
+						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					91A50FB31D912ADE0066585D = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 915AACE41D8BF745009301E0;
+					};
+				};
+			};
+			buildConfigurationList = 915AACE01D8BF745009301E0 /* Build configuration list for PBXProject "SimpleShopping" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 915AACDC1D8BF745009301E0;
+			productRefGroup = 915AACE61D8BF745009301E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				915AACE41D8BF745009301E0 /* SimpleShopping */,
+				915AACF81D8BF745009301E0 /* SimpleShoppingTests */,
+				91A50FAB1D912ADE0066585D /* SimpleNetwork */,
+				91A50FB31D912ADE0066585D /* SimpleNetworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		915AACE31D8BF745009301E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				915AACF31D8BF745009301E0 /* LaunchScreen.storyboard in Resources */,
+				915AACF01D8BF745009301E0 /* Assets.xcassets in Resources */,
+				915AACEE1D8BF745009301E0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		915AACF71D8BF745009301E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91A50FCD1D91384A0066585D /* currency.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91A50FAA1D912ADE0066585D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91A50FB21D912ADE0066585D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		915AACE11D8BF745009301E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91F8F97F1D8F834100D8E04A /* CartItemTableViewCell.swift in Sources */,
+				915AAD091D8BF7A2009301E0 /* ItemModel.swift in Sources */,
+				915AAD131D8BF7AF009301E0 /* ShoppingViewController.swift in Sources */,
+				915AAD111D8BF7AF009301E0 /* ItemTableViewCell.swift in Sources */,
+				91F8F9811D8F862600D8E04A /* CurrencyModel.swift in Sources */,
+				91A8F9B91D8FDC4300D4B72E /* UITableView+ItemCell.swift in Sources */,
+				91A8F9AF1D8FCF5300D4B72E /* CartViewModel.swift in Sources */,
+				91C65F8A1D8E6F2C00A7D825 /* CartViewController.swift in Sources */,
+				91A8F9BF1D8FE0F600D4B72E /* CartCellViewModel.swift in Sources */,
+				91A50FA61D91239C0066585D /* SimpleShoppingAPIs.swift in Sources */,
+				915AAD171D8BF7EE009301E0 /* ShoppingStepper.swift in Sources */,
+				91A8F9B51D8FDBCC00D4B72E /* ItemCellType.swift in Sources */,
+				915AAD201D8BFE87009301E0 /* UserService.swift in Sources */,
+				91A8F9B31D8FDB5300D4B72E /* ItemCellViewModel.swift in Sources */,
+				915AAD121D8BF7AF009301E0 /* SegueHandlerType.swift in Sources */,
+				91A8F9B11D8FD10400D4B72E /* ItemService.swift in Sources */,
+				915AAD151D8BF7BB009301E0 /* ShoppingViewModel.swift in Sources */,
+				91F8F9831D8FB1F200D8E04A /* CurrencyService.swift in Sources */,
+				915AAD1C1D8BF9E0009301E0 /* UserModel.swift in Sources */,
+				91A8F9BB1D8FDC6600D4B72E /* SingleSectionItemsDataSource.swift in Sources */,
+				91A50F9E1D90D9B50066585D /* CurrencyPickerDatasource.swift in Sources */,
+				915AACE91D8BF745009301E0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		915AACF51D8BF745009301E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91A50FCF1D913D240066585D /* CartViewModelTest.swift in Sources */,
+				915AACFE1D8BF745009301E0 /* SimpleShoppingTests.swift in Sources */,
+				91A50FA41D91209A0066585D /* CurrencyServiceTests.swift in Sources */,
+				91A50FA21D911E4E0066585D /* UserServiceTests.swift in Sources */,
+				91A50FD11D914C090066585D /* Mocks.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91A50FA71D912ADE0066585D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91A50FCB1D912B120066585D /* NetworkService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91A50FB01D912ADE0066585D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91A50FBC1D912ADE0066585D /* SimpleNetworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		915AACFB1D8BF745009301E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 915AACE41D8BF745009301E0 /* SimpleShopping */;
+			targetProxy = 915AACFA1D8BF745009301E0 /* PBXContainerItemProxy */;
+		};
+		91A50FB71D912ADE0066585D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91A50FAB1D912ADE0066585D /* SimpleNetwork */;
+			targetProxy = 91A50FB61D912ADE0066585D /* PBXContainerItemProxy */;
+		};
+		91A50FB91D912ADE0066585D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 915AACE41D8BF745009301E0 /* SimpleShopping */;
+			targetProxy = 91A50FB81D912ADE0066585D /* PBXContainerItemProxy */;
+		};
+		91A50FC01D912ADE0066585D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91A50FAB1D912ADE0066585D /* SimpleNetwork */;
+			targetProxy = 91A50FBF1D912ADE0066585D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		915AACEC1D8BF745009301E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				915AACED1D8BF745009301E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		915AACF11D8BF745009301E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				915AACF21D8BF745009301E0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		915AAD001D8BF745009301E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		915AAD011D8BF745009301E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		915AAD031D8BF745009301E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SimpleShopping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.punty.SimpleShopping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		915AAD041D8BF745009301E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SimpleShopping/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.punty.SimpleShopping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		915AAD061D8BF745009301E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SimpleShoppingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.punty.SimpleShoppingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleShopping.app/SimpleShopping";
+			};
+			name = Debug;
+		};
+		915AAD071D8BF745009301E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SimpleShoppingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.punty.SimpleShoppingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleShopping.app/SimpleShopping";
+			};
+			name = Release;
+		};
+		91A50FC41D912ADE0066585D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SimpleNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.punty.SimpleNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		91A50FC51D912ADE0066585D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SimpleNetwork/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.punty.SimpleNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		91A50FC81D912ADE0066585D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SimpleNetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.punty.SimpleNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleShopping.app/SimpleShopping";
+			};
+			name = Debug;
+		};
+		91A50FC91D912ADE0066585D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SimpleNetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.punty.SimpleNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleShopping.app/SimpleShopping";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		915AACE01D8BF745009301E0 /* Build configuration list for PBXProject "SimpleShopping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				915AAD001D8BF745009301E0 /* Debug */,
+				915AAD011D8BF745009301E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		915AAD021D8BF745009301E0 /* Build configuration list for PBXNativeTarget "SimpleShopping" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				915AAD031D8BF745009301E0 /* Debug */,
+				915AAD041D8BF745009301E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		915AAD051D8BF745009301E0 /* Build configuration list for PBXNativeTarget "SimpleShoppingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				915AAD061D8BF745009301E0 /* Debug */,
+				915AAD071D8BF745009301E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91A50FC31D912ADE0066585D /* Build configuration list for PBXNativeTarget "SimpleNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91A50FC41D912ADE0066585D /* Debug */,
+				91A50FC51D912ADE0066585D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91A50FC71D912ADE0066585D /* Build configuration list for PBXNativeTarget "SimpleNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91A50FC81D912ADE0066585D /* Debug */,
+				91A50FC91D912ADE0066585D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 915AACDD1D8BF745009301E0 /* Project object */;
+}
