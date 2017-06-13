@@ -22,7 +22,7 @@ final class CartViewModel {
     var canBuy = false
     
     private var countItems: [Item: Int]
-    weak var delegate: RefreshViewControllerType & InitializableViewController?
+    weak var delegate: (RefreshViewControllerType & InitializableViewController)?
     
     init(userService: UserServiceType, currencyService: CurrencyServiceType) {
         self.userService = userService
