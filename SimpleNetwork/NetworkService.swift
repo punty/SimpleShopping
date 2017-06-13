@@ -8,6 +8,10 @@
 
 import Foundation
 
+public enum Result<T: JSONInitializable> {
+    case success(T)
+    case failure(ServiceError)
+}
 
 //Something that can become use as URLRequest
 public protocol URLRequestConvertible {
@@ -30,7 +34,7 @@ public protocol JSONInitializable {
 }
 
 public protocol ServiceClientType {
-    func get<T:JSONInitializable>(api: URLRequestConvertible, completion:@escaping (T?,Error?)->())
+    func get<T:JSONInitializable>(api: URLRequestConvertible, completion:@escaping (Result<T>)->())
 }
 
 //Simple class used to get json from the network, parse and return the parsed object or the generated error
@@ -41,36 +45,38 @@ public final class ServiceClient: ServiceClientType {
         //nothing to do
     }
     
-    internal func handleSession<T:JSONInitializable>(data: Data?, response: URLResponse?, error: Error?, completion:@escaping (T?,Error?)->()) {
-        if let networkError = error {
-            completion(nil, networkError)
+    internal func handleSession<T:JSONInitializable>(data: Data?, response: URLResponse?, error: Error?, completion:@escaping (Result<T>)->()) {
+        if let _ = error {
+            completion(Result<T>.failure(.networkError))
             return
         }
         guard let jsonData = data else {
-            completion(nil, ServiceError.jsonCreationError)
+            completion(Result<T>.failure(.jsonCreationError))
             return
         }
         do {
-            guard let json = try JSONSerialization.jsonObject(with: jsonData) as? [String: Any] else { completion(nil, ServiceError.jsonCreationError)
+            guard let json = try JSONSerialization.jsonObject(with: jsonData) as? [String: Any] else { completion(Result<T>.failure(.jsonCreationError))
                 return
             }
             guard let success = json["success"] as? Bool else {
-                completion(nil, ServiceError.parsingError)
+               completion(Result<T>.failure(.parsingError))
                 return
             }
             if success {
                 let obj = try T(json:json)
-                completion(obj, nil)
+                completion(Result<T>.success(obj))
             } else {
-                completion(nil, ServiceError.networkError)
+               completion(Result<T>.failure(.networkError))
             }
-        } catch (let error) {
-            completion(nil, error)
+        } catch  {
+            completion(Result<T>.failure(.jsonCreationError))
+            return
         }
     }
     
-    public func get<T:JSONInitializable>(api: URLRequestConvertible, completion:@escaping (T?,Error?)->()) {
-        guard let request = api.asURLRequest() else {completion(nil, ServiceError.networkError)
+    public func get<T:JSONInitializable>(api: URLRequestConvertible, completion:@escaping (Result<T>)->()) {
+        guard let request = api.asURLRequest() else {
+            completion(Result<T>.failure(.networkError))
             return
         }
         URLSession.shared.dataTask(with: request) {

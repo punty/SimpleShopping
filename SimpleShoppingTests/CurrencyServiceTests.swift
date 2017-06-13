@@ -13,7 +13,6 @@ import XCTest
 
 class CurrencyServiceTests: XCTestCase {
     
-   // var service: CurrencyService!
     func testCurrency() {
         let network = NetworkMock()
         let service = CurrencyService(serviceClient: network)

@@ -46,8 +46,6 @@ final class ShoppingViewModel {
 
 extension ShoppingViewModel: PurchaseDelegate {
     
-    
-    
     func addToCart(item: Item) {
         userService.addToCart(item: item)
         showCart = userService.currentUser.cart.count > 0

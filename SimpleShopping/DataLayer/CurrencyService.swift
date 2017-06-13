@@ -46,24 +46,29 @@ final class CurrencyService: CurrencyServiceType {
     //exhange rate. I optimised this method by requesting only the selected currency
     func exchangeRate (to: String, completion: @escaping (Double?)->()) {
         serviceClient.get(api: Router.liveTo(surce: "USD", currency: to)) {
-            (t: Convert?, e) in
-            if let quotes = t {
-                if let rate = quotes.quotes["USD"+to]  {
-                    completion(rate)
-                    return
-                }
+            (result: Result<Convert>) in
+            switch result {
+                case .success(let quotes):
+                    if let rate = quotes.quotes["USD"+to]  {
+                        completion(rate)
+                        return
+                    }
+                case .failure:
+                    completion(nil)
             }
-            completion(nil)
         }
     }
     
-
-    
    ///Update the currency list from API
    func updateCurrencyList(completion: @escaping ([Currency]?)->()) {
-        serviceClient.get(api: Router.currencyList) { (t: Currencies?, e) in
-            self.persistList(list: t)
-            completion(t?.list)
+    serviceClient.get(api: Router.currencyList) { (result: Result<Currencies>) in
+        switch result {
+            case .success(let currencyList):
+                self.persistList(list: currencyList)
+                completion(currencyList.list)
+            case .failure:
+                break
+            }
         }
     }
     

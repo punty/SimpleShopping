@@ -16,8 +16,12 @@ class NetworkMock: ServiceClientType {
     
     var response:JSONInitializable?
     
-    func get<T:JSONInitializable>(api: URLRequestConvertible, completion:@escaping (T?,Error?)->()) {
-        completion((self.response as! T), nil)
+    func get<T:JSONInitializable>(api: URLRequestConvertible, completion:@escaping (Result<T>)->()) {
+        guard let r = response as? T else {
+            completion(Result<T>.failure(.networkError))
+            return
+        }
+        completion(Result.success(r))
     }
 }
 
